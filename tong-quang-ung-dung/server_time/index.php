@@ -1,12 +1,19 @@
 <html>
-    <head>
-       <title>Thời gian hiện tại</title>
-    </head>
-    <body>
-        <h1>  Current Server Time is: 
-             <?php
-             date_default_timezone_set('Asia/Ho_Chi_Minh');
-            echo date('Y-M-d h:m:s'); ?> 
-        </h1>
-    </body>
+ <body>
+ <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+   Name: <input type="text" name="fname">
+   <input type="submit">
+ </form>
+ <?php
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     /* collect value of input field */
+     $name = $_POST['fname'];
+     if (empty($name)) {
+         echo "Name is empty";
+     } else {
+         echo $name;
+     }
+ }
+?> 
+</body>
 </html>
