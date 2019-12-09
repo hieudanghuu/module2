@@ -36,6 +36,7 @@ th,td {
     </tr>
     
     <?php
+    
     $customerlist = array(
         "1" => array ("ten" => "Mai Văn Hoàng",
                       "ngaysinh" => "1983-03-08",
