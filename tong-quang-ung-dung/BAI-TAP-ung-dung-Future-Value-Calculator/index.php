@@ -19,6 +19,9 @@
         h1 {
             color: blue;
         }
+        label{
+            color: red;
+        }
     </style>
 </head>
 
