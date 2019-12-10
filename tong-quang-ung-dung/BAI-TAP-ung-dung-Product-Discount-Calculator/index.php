@@ -27,9 +27,9 @@
 <body>
     <form action="display.php" method="post">
         <h1>Product Discount Calculator</h1>
-        <label>Product Description:</label><br><input class='demo'type="text" name= "name"><br>
-        <label>List Price:</label><br><input type="text" class='demo'name = "price"><br>
-        <label>Discount Percent:</label> <br><input class='demo' type="text" name="discount"> (%)<br>
+        <label>Product Description:</label><br><input class='demo'type="text" name= "name" required><br>
+        <label>List Price:</label><br><input type="text" class='demo'name = "price"required><br>
+        <label>Discount Percent:</label> <br><input class='demo' type="text" name="discount"required> (%)<br>
         <input type="submit" name="calculate" value="calculate">
     </form>
 </body>

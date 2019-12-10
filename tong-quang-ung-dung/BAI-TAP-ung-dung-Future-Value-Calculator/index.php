@@ -28,10 +28,10 @@
 <body>
     <form action="calculate.php" method="post">
         <div id="data">
-            <h1>Future Value Calculator</h1>
-            <label> Investment Amount: <input type="text" name="tien" ></label><br><br>
-            <label> Yearly Interest Rate: <input type="text" name="lai" ></label><br><br>
-            <label> Number of Years :<input type="text" name="nam" ></label><br><br>
+            <h1>Future Value Calculator</h1>           
+            <label> Investment Amount: <input type="text" name="tien"  require></label><br><br>
+            <label> Yearly Interest Rate: <input type="text" name="lai" require></label><br><br>
+            <label> Number of Years :<input type="text" name="nam" require></label><br><br>
 
         </div>
         <div>
@@ -39,5 +39,4 @@
         </div>
     </form>
 </body>
-
 </html>
