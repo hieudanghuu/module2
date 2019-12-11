@@ -20,7 +20,7 @@
 
 <body>
     <form method="post">
-        <select name="prints" id="">
+        <select name="prints">
             <option value="hv">Print the rectangle</option>
             <option value="tg">Print the square triangle</option>
             <option value="tgc">Print isosceles triangle</option>
@@ -30,25 +30,56 @@
         </div>
     </form>
     <?php
-    $rectangle = array(
-        array('*', '*', '*', '*', '*', '*', '*'),
-        array('*', '*', '*', '*', '*', '*', '*'),
-        array('*', '*', '*', '*', '*', '*', '*')
-    );
+
     function rectangle()
     {
-        for ($i = 0; $i < 7; $i++) {
-            for ($j = 0; $j < 3; $j++) {
-                return $rectangle[$i][$j];
+        for ($i = 0; $i < 10; $i++) {
+            for ($j = 0; $j < 50; $j++) {
+                echo '*';
             }
+            echo "<br>";
         }
-    };
+    }
+
+    function triagle()
+    {
+        for ($i = 0; $i < 10; $i++) {
+            for ($j = 0; $j < $i; $j++) {
+                echo '*';
+            }
+            echo "<br>";
+        }
+    }
+
+    function tgv()
+    {
+        for ($i = 7; $i >= 1; $i--) {
+            for ($j = 1; $j <= $i; $j++) { 
+                echo '*&ensp;';
+            }
+            echo "<br>";
+        }
+    }
+
+    function draw(string $choose)
+    {
+        switch ($choose) {
+            case 'hv':
+                rectangle();
+                break;
+            case 'tg':
+                triagle();
+                break;
+            case 'tgc':
+                tgv();
+                break;
+        }
+    }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $printRectangle = $_POST["prints"];
-        if ($printRectangle == "hv") { 
-             echo (rectangle());
-        }
+        // var_dump($printRectangle);
+        draw($printRectangle);
     }
 
     ?>
