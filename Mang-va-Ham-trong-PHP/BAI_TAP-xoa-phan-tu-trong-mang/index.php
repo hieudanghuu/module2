@@ -51,7 +51,7 @@
         }      
         try {
             if (($_POST["length"] === '') || ($_POST["length"] === '0')
-                || ($_POST["num"] === '')
+                || ($_POST["num"] === '0')
             ) {
                 throw new Exception("không được bỏ trống");
             } else {
@@ -63,18 +63,6 @@
                 $indexDEL = seachNum($arr1,$_POST['num']);
                 unset($arr1[$index_del]);
                 echo print_r($arr1);
-
-
-                // if (seachNum($arr1, (int)$_POST["num"]) === true) {
-                //     $result = delNum($arr1, $_POST["num"]);
-                //     echo "<pre>";
-                //     echo print_r($result). "<br><br>";
-                //     echo "phần tử bị xóa : ".$_POST["num"];
-                //     echo "<pre>";
-                   
-                // } else {
-                //     echo $_POST["num"] . "  không có trong mảng <br><br>";
-                // }
             }          
         } catch (Exception $e) {
             echo $e->getMessage();
