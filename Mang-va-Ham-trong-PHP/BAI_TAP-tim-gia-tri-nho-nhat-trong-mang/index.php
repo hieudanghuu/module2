@@ -41,16 +41,24 @@
         function arrMin($arr)
         {
             $min = $arr[0];
-            for ($i = 1; $i < count($arr); $i++) {
-                if ($arr[$i] < $min) {                
+            for ($i = 0; $i < count($arr); $i++) {
+                if ($arr[$i] < $min) {
                     $min = $arr[$i];
                 }
                 return $min;
             }
         }
-        $arr1 = ranArray($_POST["length"]);
-        echo var_dump($arr1)."<br>";
-        echo arrMin($arr1);
+        try {
+            if (($_POST["length"] === "") || ($_POST["length"] === '0')) {
+                throw new Exception("ko đc để trống");
+            } else {
+                $arr1 = ranArray($_POST["length"]);
+                echo var_dump($arr1) . "<br>";
+                echo arrMin($arr1);
+            }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
     ?>
 </body>
