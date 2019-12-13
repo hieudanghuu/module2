@@ -40,7 +40,17 @@
             $this->c = $_c;
         }
         public function getterA()
-        { }
+        {
+            $this->a;
+        }
+        public function getterB()
+        {
+            $this->b;
+        }
+        public function getterC()
+        {
+            $this->c;
+        }
         public function getDiscriminant()
         {
             $delta = ($this->b * $this->b) - (4 * $this->a * $this->c);
