@@ -29,22 +29,22 @@
             $sum +=  $arr[$i][$i];
         }return $sum;
     }
-    function sumArray1($arr)
-    {
-        $t = 0;
-        $sum1 = 0;        
-        for($j= count($arr) - 1 ;$j < 0;$j --) {            
-            $sum1 +=  $arr[$t][$j];
-            $t ++;
-        }
-        return $sum1 ;
-    }
+    // function sumArray1($arr)
+    // {
+    //     $t = 0;
+    //     $sum1 = 0;        
+    //     for($j= count($arr) - 1 ;$j < 0;$j --) {            
+    //         $sum1 +=  $arr[$t][$j];
+    //         $t ++;
+    //     }
+    //     return $sum1 ;
+    // }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $size = (int) $_POST["num"];
         $arr = ranArray($size);
          echo sumArray($arr)."<br>";
-         echo sumArray1($arr);
+         
 
         // var_dump($arr);
     }
