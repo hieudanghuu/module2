@@ -24,14 +24,16 @@
     }
     function sumArr($arr,$num){
         $sum = 0;
-        for ($i = 0 ; $i < count($arr); $i ++ ){
+        for ($i = 0 ; $i < count($arr) ; $i ++ ){
                $sum += $arr[$i][$num];
         }return $sum;
     }
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $size = (int) $_POST["num"];
+        $height = (int)$_POST["num1"];
+
         $arr = ranArray($size);
-         echo sumArr($arr,$size)."<br>";         
+         echo sumArr($arr,$height)."<br>";         
     }
     ?>
     <table border="1">
