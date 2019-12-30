@@ -16,11 +16,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             if ($tinh == "*"){
                 $result = $num1 * $num2;
+                
             }
             if ( $tinh == "/"){
                 $result = $num1 / $num2;
             }
             echo "resule: ". "$num1 $tinh $num2 = $result";
+
+
         }     
     }catch(Exception $e){
         echo $e->getMessage();

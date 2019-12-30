@@ -19,6 +19,7 @@
 
 <body>
     <form method="post">
+
         <div name="input">
             <h2>Nhập độ dài của mảng </h2><br>
             <h4>nhập độ dài mảng 1:</h4><input type="text" name="length">

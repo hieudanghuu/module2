@@ -31,6 +31,8 @@ class Point2d
         return '"('.$this->x.",".$this->y;
     }
 }
+
+
 include_once ("Point3D.php");
 $point2d = new Point2d(2,4);
 echo $point2d-> getXY() ."} <br>";
@@ -39,4 +41,5 @@ echo $point2d-> toString().')" <br><br>';
 $point3d = new Point3d(3,5,7);
 echo $point3d-> getXYZ()."<br>";
 echo $point3d-> toString();
+
 ?>

@@ -21,4 +21,5 @@ class Square extends Rectangle implements Colorable
     {
         return "Color all four sides.";
     }
+
 }

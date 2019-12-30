@@ -24,6 +24,7 @@
             <h4>nhập độ dài mảng 1:</h4>
             <input type="text" name="length">
         </div><br><br>
+
         <div>
             <input type="submit" name="print" value="Enter">
         </div>
