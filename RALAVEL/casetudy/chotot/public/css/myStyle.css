@@ -1,0 +1,7 @@
+@media screen and (max-width: 540px) {
+    footer{
+        visibility: hidden;
+        display: none;
+    }
+}
+

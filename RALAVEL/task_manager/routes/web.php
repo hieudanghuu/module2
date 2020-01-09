@@ -11,31 +11,18 @@
 |
 */
 
+use Illuminate\Http\Request;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::prefix('customer')->group(function(){
-   Route::get('index',function(){
-       return view('modules.customer.index');
-   });
-
-   Route::get('create', function(){
-
-   });
-   Route::post('store', function(){
-
-   });
-   Route::get('{id}/show', function(){
-
-   });
-   Route::get('{id}/edit', function(){
-
-   });
-   Route::patch('{id}/update', function(){
-
-   });
-   Route::delete('{id}', function(){
-
-   });
+Route::prefix('customer')->group(function () {
+    Route::get('index', 'CustomerController1@index');
+    Route::get('create', 'CustomerController1@create');
+    Route::post('store', 'CustomerController1@store');
+    Route::get('{id}/show', 'CustomerController1@show',)->where('id', '[0-9]+');
+    Route::get('{id}/edit', 'CustomerController1@edit')->where('id', '[0-9]+');
+    Route::patch('{id}/update', 'CustomerController1@update')->where('id', '[0-9]+');
+    Route::get('{id}', 'CustomerController1@destroy')->where('id', '[0-9]+');
 });
