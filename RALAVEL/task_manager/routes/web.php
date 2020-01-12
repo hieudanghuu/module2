@@ -36,3 +36,7 @@ Route::prefix('tasks')->group(function () {
     Route::patch('{id}/update', 'CustomerController1@update')->where('id', '[0-9]+');
     Route::get('{id}', 'CustomerController1@destroy')->where('id', '[0-9]+');
 });
+
+Route::group(['prefix' => 'customers'], function () {
+    Route::get('/','CustomerController2@index')->name('customers.index');
+  });
